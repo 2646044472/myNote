@@ -2,16 +2,22 @@
 
 把下载好的文件添加到Path
 
-1.  wd.find_element(By.ID, 'username').send_keys('byhy')
-2.  wd.find_element(By.CLASS_NAME, 'password').send_keys('sdfsdf')
-3.  wd.find_element(By.TAG_NAME, 'input').send_keys('sdfsdf')
-4.  wd.find_element(By.CSS_SELECTOR,'button[type=submit]').click()
 
+
+准备
 ```python
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 wd = webdriver.Edge()
+```
+
+get方法：
+1.  wd.find_element(By.ID, 'username').send_keys('byhy')
+2.  wd.find_element(By.CLASS_NAME, 'password').send_keys('sdfsdf')
+3.  wd.find_element(By.TAG_NAME, 'input').send_keys('sdfsdf')
+4.  wd.find_element(By.CSS_SELECTOR,'button[type=submit]').click()
+```python
 wd.get("https://www.umeh.top/course/GEGA1006")
 # elements = wd.find_element(By.CLASS_NAME, 'break-words')
 elements = wd.find_element(By.TAG_NAME, 'div')
