@@ -14,7 +14,7 @@ The repository is organized into the following folders:
 
 ### Web Scraping
 
-This folder contains my notes on web scraping techniques, tools, and libraries such as BeautifulSoup and Scrapy. It also includes code examples demonstrating how to scrape data from various websites.
+This folder contains my notes on web scraping techniques, tools, and libraries such as BeautifulSoup and Selenium. It also includes code examples demonstrating how to scrape data from various websites.
 
 ### Data Processing
 
