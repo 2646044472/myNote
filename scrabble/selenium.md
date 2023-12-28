@@ -10,6 +10,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 wd = webdriver.Edge()
+wd.implicitly_wait(5)
 ```
 
 find_element(s)方法：
