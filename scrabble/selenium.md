@@ -13,7 +13,7 @@ wd = webdriver.Edge()
 ```
 
 get方法：
-By.ID, By.CLASS_NAME, By.TAG_NAME, By.CSS_SELECTOR
+By.ID,  By.CLASS_NAME,  By.TAG_NAME,  By.CSS_SELECTOR
 ```python
 wd.get("https://www.umeh.top/course/GEGA1006")
 # elements = wd.find_element(By.CLASS_NAME, 'break-words')
