@@ -13,10 +13,7 @@ wd = webdriver.Edge()
 ```
 
 get方法：
-1.  wd.find_element(By.ID, 'username').send_keys('byhy')
-2.  wd.find_element(By.CLASS_NAME, 'password').send_keys('sdfsdf')
-3.  wd.find_element(By.TAG_NAME, 'input').send_keys('sdfsdf')
-4.  wd.find_element(By.CSS_SELECTOR,'button[type=submit]').click()
+By.ID, By.CLASS_NAME, By.TAG_NAME, By.CSS_SELECTOR
 ```python
 wd.get("https://www.umeh.top/course/GEGA1006")
 # elements = wd.find_element(By.CLASS_NAME, 'break-words')
