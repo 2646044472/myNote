@@ -25,4 +25,5 @@ wd.get("https://www.umeh.top/course/GEGA1006")
 element.get_attribute('textContent')
 element.get_attribute('class')    # 获取class的值
 element.get_attribute('outerHTML')
+element.get_attribute('value')
 ```
