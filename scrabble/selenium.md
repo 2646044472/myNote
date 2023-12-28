@@ -12,7 +12,7 @@ import time
 wd = webdriver.Edge()
 ```
 
-get方法：
+find_element(s)方法：
 By.ID,  By.CLASS_NAME,  By.TAG_NAME,  By.CSS_SELECTOR
 ```python
 wd.get("https://www.umeh.top/course/GEGA1006")
