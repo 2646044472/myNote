@@ -1,4 +1,5 @@
-请下载Edge浏览器驱动：https://msedgedriver.azureedge.net/120.0.2210.91/edgedriver_win64.zip
+请下载Edge浏览器驱动：https://msedgedriver.azureedge.net/120.0.2210.91/edgedriver_win64.zip  
+
 把下载好的文件添加到Path
 
 1.  wd.find_element(By.ID, 'username').send_keys('byhy')
