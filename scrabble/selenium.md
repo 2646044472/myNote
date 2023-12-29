@@ -39,9 +39,9 @@ elements = wd.find_elements(By.CSS_SELECTOR, '#ok  .plant')  #只要是 class:pl
 #可以用这个[]
 elements = wd.find_elements(By.CSS_SELECTOR, '[href="http://www.miitbeian.gov.cn"]')
 #是div[class='SKnet'] 不是div[.SKnet]
-# *是包含 ^是开头 $是结尾  如：[href*="miitbeian"]
+#*是包含 ^是开头 $是结尾  如：[href*="miitbeian"]
 #可以用F12的element验证css
-# ,优先级低 #t1>span,p 是找 #t1>span 和 p 别乱用()
+#,优先级低 #t1>span,p 是找 #t1>span 和 p 别乱用()
 #第n个子元素 #t1 :nth-child(2) 倒数元素:nth-last-child(2)
 #同类型的第n个子元素0 span:nth-of-type(1)
 #兄弟节点 +是紧跟节点 ~是后面所有兄弟节点
