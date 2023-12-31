@@ -21,7 +21,7 @@ sns.countplot(x='class', data=data)
 # 绘制热力图
 sns.heatmap(data, annot=True ) 
 # 绘制饼图
-plt.pie(sizes, labels=labels, colors=colors, autopct='%.1f%%')  #%表示文字开头, %%表示%
+plt.pie(species_count, autopct='%.0f%%', labels=species_count.index)  #%表示文字开头, %%表示%
 
 plt.show()  #可以一同展示多个图 
 
