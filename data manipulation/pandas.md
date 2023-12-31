@@ -15,7 +15,7 @@ df[["人口", "面积"]] = df["人口密度"].str.split("/", expand=True)
 df = df.drop("人口秘密", axis=1)
 df["姓"].str.cat(df["名"],sep="-")
 pd.melt(df, id_vars=['国家代码','年份'], var_name='年龄组'， value_name='肺结核病例数')  #转换除了国家代码、年份外的变成一列年龄组
-df.explode("课程列表")
+df.explode("课程列表")    #df['genres'] = df['genres'].apply(eval)注意转换字符串，看清楚是字符串还是列表
 df.fillna({"A":0,"B":10},inplace=True)  #填充缺失值
 df.dropna(subset=["学号"],inplace=True)
 df.drop_duplicates(subset=["姓名","班级"])
