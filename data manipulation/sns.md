@@ -34,7 +34,7 @@ plt.show()  #可以一同展示多个图
 #可以传入binwidth=0.1, 当同时展示多个图时统一宽度,并用label=""备注标签
 #记得plt.legend()
 #对比小提琴图时传入x="",y="",这样图不会挤到一起
-fig, axes = plt.subpolts(1,3,figsize=(15,5)) #一行三列空白子图,绘图时再传入ax=axes[0]
+fig, axes = plt.subpolts(1,3,figsize=(15,5))  #一行三列空白子图,绘图时再传入ax=axes[0]
 sns.piarplot(df) #一共得到n*n个图,一次性探索变量分布
  
 ```
