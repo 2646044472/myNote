@@ -1,5 +1,5 @@
 plt不支持df只支持Series,只有sns才支持df<br>
-绘制图表常见操作：
+# 绘制图表常见操作：
 ```python
 import numpy as np
 import pandas as pd
