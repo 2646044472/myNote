@@ -20,6 +20,15 @@ df.fillna({"A":0,"B":10},inplace=True)  #填充缺失值
 df.dropna(subset=["学号"],inplace=True)
 df.drop_duplicates(subset=["姓名","班级"])
 df["学校"].replace(["清华"],"清华大学")
-
+pd.concat([df1,df2], ignore_index=True, axix=0)
+pd.merge(df1,df2, on='ID')  #可以调用ledt_on, right_on去对应, 调用suffiex=['_df1','_df2']在合并时添加后缀,调用how="inner","outer","left","right"决定保留值
+df.groupby("分店编号")
+df.groupby(["分店编号","时间段"])[["销售额","销售数量"]].mean()   #有内层索引和外层索引
+pd.pivot_table(df, index=["分点编号","时间段"], columns="商品类别", values="销售额", aggfunc=np.sum)  #默认是求平均
+age_bins=[0,10,20,30,40,50,60,100]
+age_labels=["儿童","青少年","青年","壮年","中年","中老年","老年"]
+pd.cut(df["年龄"], age_bins, label=age_lables)
+df.reset_index()  #group_by后出现外层索引时重置索引 
+df.query('(性别 == "男")&("年龄 < 20")')  #快速查询
 ```
 在求average时index=0是行 index=1是列
