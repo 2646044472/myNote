@@ -30,5 +30,6 @@ age_labels=["儿童","青少年","青年","壮年","中年","中老年","老年"
 pd.cut(df["年龄"], age_bins, label=age_lables)
 df.reset_index()  #group_by后出现外层索引时重置索引 
 df.query('(性别 == "男")&("年龄 < 20")')  #快速查询
+df[df['course_name'].str.startswith('')].head(3000).dropna(subset=["overall_grade"],inplace=False).sort_values("grade")
 ```
 在求average时index=0是行 index=1是列
