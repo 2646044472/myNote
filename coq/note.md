@@ -1,5 +1,5 @@
-一些重要定理：
-add_assoc
+# 一些重要定理：
+1. add_assoc<br>
      : forall n m p : nat, n + (m + p) = n + m + p
 plus_Sn_m
      : forall n m : nat, S n + m = S (n + m)
