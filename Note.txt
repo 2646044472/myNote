@@ -1,0 +1,72 @@
+一些重要定理：
+add_assoc
+     : forall n m p : nat, n + (m + p) = n + m + p
+plus_Sn_m
+     : forall n m : nat, S n + m = S (n + m)
+plus_n_O
+     : forall n : nat, n = n + 0
+plus_O_n
+     : forall n : nat, 0 + n = n
+add_comm
+     : forall n m : nat, n + m = m + n
+Theorem app_nil_r : forall (X:Type), forall l:list X,
+  l ++ [] = l.
+Theorem app_assoc : forall A (l m n:list A),
+  l ++ m ++ n = (l ++ m) ++ n.
+
+Definition用法：
+
+Definition snd (p : natprod) : nat :=
+  match p with
+  | pair x y => y
+  end.
+
+Fixpoint filter {X:Type} (test: X->bool) (l:list X) : list X :=
+  match l with
+  | [] => []
+  | h :: t =>
+    if test h then h :: (filter test t)
+    else filter test t
+  end.
+
+Assert用法：
+
+Lemma example : forall n : nat, n + 0 = n.
+Proof.
+  intros n.
+  assert (H : 0 + n = n).   (* 引入一个断言 *)
+  - (* 证明断言 *)
+    rewrite plus_comm.
+    reflexivity.
+  - (* 继续证明 *)
+    rewrite H.
+    reflexivity.
+Qed.
+
+Shelve可以用于delay证明.
+
+一些Tactics:
+apply trans_eq with (m:=[c;d]).
+specialize trans_eq with (m:=[c;d]) as H.
+      - [intros]: move hypotheses/variables from goal to context
+      - [reflexivity]: finish the proof (when the goal looks like [e = e])
+      - [apply]: prove goal using a hypothesis, lemma, or constructor
+      - [apply... in H]: apply a hypothesis, lemma, or constructor to a hypothesis in the context (forward reasoning)
+      - [apply... with...]: explicitly specify values for variable that cannot be determined by pattern matching
+      - [simpl]: simplify computations in the goal
+      - [simpl in H]: ... or a hypothesis
+      - [rewrite]: use an equality hypothesis (or lemma) to rewrite the goal
+      - [rewrite ... in H]: ... or a hypothesis
+      - [symmetry]: changes a goal of the form [t=u] into [u=t]
+      - [symmetry in H]: changes a hypothesis of the form [t=u] into [u=t]
+      - [transitivity y]: prove a goal [x=z] by proving two new subgoals, [x=y] and [y=z]
+      - [unfold]: replace a defined constant by its right-hand side in the goal
+      - [unfold... in H]: ... or a hypothesis
+      - [destruct... as...]: case analysis on values of inductively defined type
+      - [destruct... eqn:...]: specify the name of an equation to be added to the context, recording the result of the case analysis
+      - [induction... as...]: induction on values of inductively defined types
+      - [injection... as...]: reason by injectivity on equalities between values of inductively defined types
+      - [discriminate]: reason by disjointness of constructors on equalities between values of inductively defined types
+      - [assert (H: e)] (or [assert (e) as H]): introduce a "local lemma" [e] and call it [H]
+      - [generalize dependent x]: move the variable [x] (and anything else that depends on it) from the context back to an explicit hypothesis in the goal formula
+      - [f_equal]: change a goal of the form [f x = f y] into [x = y] *)
