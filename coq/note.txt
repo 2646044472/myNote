@@ -2,6 +2,9 @@ specialize (H with (x1 := t1) (x2 := t2) ... (xn := tn)).    or
 specialize (H t1 t2 ... tn).
 assumption.      automatically finds the proper H to finish provement
 subst.           automatically replace all thing such as x = x0
+exact.           a more concrete version of apply
+pose proof       bring something already proved into H.
+
 
 add_assoc
      : forall n m p : nat, n + (m + p) = n + m + p
