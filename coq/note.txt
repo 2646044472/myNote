@@ -5,6 +5,8 @@ subst.           automatically replace all thing such as x = x0
 exact.           a more concrete version of apply
 pose proof       bring something already proved into H.
 
+note that the variant in when part and then part is not the same. For example, b = false in when and b' = true in then.
+
 
 add_assoc
      : forall n m p : nat, n + (m + p) = n + m + p
