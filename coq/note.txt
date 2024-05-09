@@ -1,10 +1,9 @@
 specialize (H with (x1 := t1) (x2 := t2) ... (xn := tn)).    or
 specialize (H t1 t2 ... tn).
-assumption.
-subst.
+assumption.      automatically finds the proper H to finish provement
+subst.           automatically replace all thing such as x = x0
 
-一些重要定理：
-1. add_assoc
+add_assoc
      : forall n m p : nat, n + (m + p) = n + m + p
 plus_Sn_m
      : forall n m : nat, S n + m = S (n + m)
