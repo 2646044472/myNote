@@ -1,8 +1,1 @@
-https://papercopilot.com/statistics/iclr-statistics/iclr-2024-statistics/
-https://dl.acm.org/doi/pdf/10.1145/3474085.3475455
-https://ns.inria.fr/d3/SymmetrySketch/
-https://github.com/Rowl1ng/3Dsketch2shape
-
-
-mark down:
-https://repo-sam.inria.fr/d3/SymmetrySketch/supplementals/study_videos_1.html
+https://cmp.felk.cvut.cz/im4sketch/
