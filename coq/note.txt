@@ -1,4 +1,4 @@
-致敬传奇教师xqw course_id=CISC3020
+pay full respect to legendary professor xqw CISC3020
 specialize (H with (x1 := t1) (x2 := t2) ... (xn := tn)).    or
 specialize (H t1 t2 ... tn).
 assumption.      automatically finds the proper H to finish provement
