@@ -1,1 +1,1 @@
-More codes are comming soon
+More code are comming soon
