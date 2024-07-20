@@ -1,4 +1,5 @@
 conda install -c nvidia cuda-toolkit=11.2
+lscpu
 df -h 看硬盘
 free -h 看内存
 nvidia-msi
