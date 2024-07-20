@@ -8,7 +8,7 @@ nvidia-msi
 
 conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
 pip install --upgrade charset-normalizer requests
-
+pip show torch
 
 conda clean -a
 conda update -n base -c defaults conda
