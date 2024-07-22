@@ -1,6 +1,7 @@
-conda install -c nvidia cuda-toolkit=11.2
+conda install -c nvidia cuda-toolkit=11.2  # 尽量只用toolkit,因为cuda会乱装些有的没的导致报错
 conda install cuda=12.1.0 -c nvidia
-lscpu
+lscpu 
+top
 df -h 看硬盘
 free -h 看内存
 nvidia-smi
