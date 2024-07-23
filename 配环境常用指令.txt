@@ -19,3 +19,8 @@ conda update -n base -c defaults conda
 model_key = "stabilityai/stable-diffusion-2-1-base"
 model_key = "stabilityai/stable-diffusion-2-base"
 model_key = "runwayml/stable-diffusion-v1-5"
+
+
+Please set `NCCL_P2P_DISABLE="1"` and `NCCL_IB_DISABLE="1" or use `accelerate launch` which will do this automatically.
+export NCCL_P2P_DISABLE="1"
+export NCCL_IB_DISABLE="1"
