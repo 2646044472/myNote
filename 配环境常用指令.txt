@@ -5,6 +5,7 @@ top
 df -h 看硬盘
 free -h 看内存
 nvidia-smi
+用ssh服务器的时候记得选择Interpreter不然vscode会用默认的
 
 
 conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
