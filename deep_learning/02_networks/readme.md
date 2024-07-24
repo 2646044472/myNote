@@ -5,3 +5,5 @@
 padding:
 如果想让输出大小与输入大小相同，可以设置:
 p = (f - 1) / 2 （当 stride = 1 时） 
+
+Batch Normalization可以显著增加收敛速度和泛化能力，但要注意1D(序列数据)还是2d(CV)
