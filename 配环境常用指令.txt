@@ -27,4 +27,4 @@ export NCCL_IB_DISABLE="1"
 每次重启都要export一下
 
 export CUDA_VISIBLE_DEVICES=1
-
+torch.cuda.set_device(1) 
