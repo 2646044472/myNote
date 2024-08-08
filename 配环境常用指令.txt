@@ -38,4 +38,4 @@ GPU id:
 export CUDA_VISIBLE_DEVICES=1
 torch.cuda.set_device(1) 
 
-pip install xformers==0.0.22.post7 (cu118+torch210)
+pip install xformers==0.0.22.post7  # (cu118+torch210)
