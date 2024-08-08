@@ -1,31 +1,40 @@
-conda install -c nvidia/label/cuda-11.8.0 cuda-toolkit=11.8  # 锁11.8所有的相关依赖
-# conda install -c nvidia cuda-toolkit=11.2    会装一些不相关的依赖，不推荐
-# conda install cuda=12.1.0 -c nvidia    会装一些不相关的依赖，不推荐
+cuda:
+conda install -c nvidia/label/cuda-11.8.0 cuda-toolkit=11.8  锁11.8所有的相关依赖
+conda install -c nvidia cuda-toolkit=11.2  会装一些不相关的依赖，不推荐
+conda install cuda=12.1.0 -c nvidia  会装一些不相关的依赖，不推荐
+conda list | grep cuda
+
+查看资源使用情况：
 lscpu 
 top
 df -h 看硬盘
 free -h 看内存
 nvidia-smi
+gpustat
+
 用ssh服务器的时候记得选择Interpreter不然vscode会用默认的
 
-
+Pytorch:
 conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
 pip install --upgrade charset-normalizer requests
 pip show torch
-conda list | grep cuda
 
+
+移除环境：
 conda clean -a
 conda update -n base -c defaults conda
 
+常用stable-diffusion:
 model_key = "stabilityai/stable-diffusion-2-1-base"
 model_key = "stabilityai/stable-diffusion-2-base"
 model_key = "runwayml/stable-diffusion-v1-5"
 
-
+训练：
 Please set `NCCL_P2P_DISABLE="1"` and `NCCL_IB_DISABLE="1" or use `accelerate launch` which will do this automatically.
 export NCCL_P2P_DISABLE="1"
 export NCCL_IB_DISABLE="1"
 每次重启都要export一下
 
+GPU id:
 export CUDA_VISIBLE_DEVICES=1
 torch.cuda.set_device(1) 
